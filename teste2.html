@@ -81,18 +81,6 @@
         }
     }
 
-    function handleError(msg, data) {
-        window.alert(data);
-        $.post(
-            "/frontlog.php",
-            {
-                message: msg || '(no message)',
-                data: data
-            }
-        );
-        window.location.href = u;
-    }
-
     $(document).ready(function () {
         setCF();
 
