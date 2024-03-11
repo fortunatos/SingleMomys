@@ -160,9 +160,19 @@ var country_code = this.responseText.replace(/(\r\n|\n|\r)/gm,"").split('loc=');
 country_code = country_code[1].split('tls=');
 country_code = country_code[0];
            
+function cLinkAFF()
+{
+
+var xhttp = new XMLHttpRequest();
+xhttp.onreadystatechange = function() {
+if (this.readyState == 4 && this.status == 200) {
+var country_code = this.responseText.replace(/(\r\n|\n|\r)/gm,"").split('loc=');
+country_code = country_code[1].split('tls=');
+country_code = country_code[0];
+           
 if (country_code == "US"){
 
-window.location.href = 'https://bgfffig.trackoffer.link/c/722b42778897b'; 
+window.location.href = 'https://bgfffig.trackoffer.link/c/fc564334a6ee9'; 
   
 }
 
